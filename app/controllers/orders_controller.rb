@@ -14,7 +14,16 @@ class OrdersController < ApplicationController
 
   # GET /orders/new
   def new
+    @cart = current_cart
+    if @cart.line_items.empty?
+      redirect_to store_url, notice: "Your cart is empty"
+      return
+    end
     @order = Order.new
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json {render json: @order}
+    end
   end
 
   # GET /orders/1/edit

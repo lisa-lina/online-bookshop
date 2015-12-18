@@ -5,7 +5,7 @@ class OrdersController < ApplicationController
   # GET /orders.json
   def index
     # @orders = Order.all
-    @orders = Order('created_at DESC').paginate page: params[:page], per_page: 10
+    @orders = order('created_at DESC').paginate page: params[:page], per_page: 10
     respond_to do |format|
       format.html #index.html.erb
       format.json {render json: @orders}

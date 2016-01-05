@@ -1,3 +1,4 @@
-OrderNotifier#shipped
-
-<%= @greeting %>, find me in app/views/order_notifier/shipped.text.erb
+Dear <%= @order.name %>
+Thank you for your recent order from the Pragmatic Store.
+We've shipped your recent order:
+<%= render @order.line_items %>

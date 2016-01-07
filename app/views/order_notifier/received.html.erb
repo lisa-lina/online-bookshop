@@ -1,5 +1,8 @@
-<h1>OrderNotifier#received</h1>
-
+<h3>Pragmatic Order Confirmation</h3>
 <p>
-  <%= @greeting %>, find me in app/views/order_notifier/received.html.erb
+  This is just to let you know that we've confirmed your recent order:
 </p>
+<table>
+  <tr><th colspan="2">Qty</th>Description<th></th></tr>
+  <%= render @order.line_items %>
+</table>

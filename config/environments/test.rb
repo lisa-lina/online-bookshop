@@ -36,7 +36,7 @@ Rails.application.configure do
     domain: "tibco-support.com",
     authentication: "plain",
     user_name: "nali@tibco-support.com",
-    password: "Lisa1&Lina1",
+    password: "***",
     enable_starttls_auto: true
   }
 

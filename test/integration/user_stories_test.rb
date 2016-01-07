@@ -28,8 +28,8 @@ class UserStoriesTest < ActionDispatch::IntegrationTest
     post_via_redirect "/orders",
                       order: {
                           name: "Dave Thomas",
-                          address: "123 The Street",
-                          email: "dave@example.com",
+                          address: "MyText",
+                          email: "dave@example.org",
                           pay_type: "Check"
                       }
     assert_response :success

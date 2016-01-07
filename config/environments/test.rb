@@ -37,7 +37,8 @@ Rails.application.configure do
     authentication: "plain",
     user_name: "lisaleelina@gmail.com",
     password: "Lisa1&Lina1",
-    enable_starttls_auto: true
+    enable_starttls_auto: true,
+    openssl_verify_mode: 'none'
   }
 
   # Randomize the order test cases are executed.

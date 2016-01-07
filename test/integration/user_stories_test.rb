@@ -15,7 +15,7 @@ class UserStoriesTest < ActionDispatch::IntegrationTest
     assert_template "index"
 
     xml_http_request :post, '/line_items', product_id: ruby_book.id
-    assert_resonse :success
+    assert_response :success
 
     cart = Cart.find(session[:cart_id])
     assert_equal 1, cart.line_items.size

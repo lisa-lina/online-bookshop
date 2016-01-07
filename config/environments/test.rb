@@ -33,10 +33,10 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
-    domain: "tibco-support.com",
+    domain: "gmail.com",
     authentication: "plain",
-    user_name: "nali@tibco-support.com",
-    password: "Lisa1&Lina1",
+    user_name: "lisaleelina@gmail.com",
+    password: "1!qaz2@wsx",
     enable_starttls_auto: true
   }
 

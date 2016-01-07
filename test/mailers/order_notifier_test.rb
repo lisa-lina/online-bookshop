@@ -6,6 +6,9 @@ class OrderNotifierTest < ActionMailer::TestCase
     assert_equal "Pragmatic Store Order Confirmation", mail.subject
     assert_equal ["dave@example.org"], mail.to
     assert_equal ["lisaleelina@gmail.com"], mail.from
+    puts "=========================="
+    puts mail.body.encoded
+    puts "=========================="
     assert_match /1 x  Programming  Ruby 1.9/, mail.body.encoded
   end
 

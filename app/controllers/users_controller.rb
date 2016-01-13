@@ -30,7 +30,7 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     # @user = User.new(user_params)
-    @user = User.new(params[:user])
+    @user = User.new(user_params)
 
     respond_to do |format|
       if @user.save
@@ -48,7 +48,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       @user = User.find(params[:id])
-      if @user.update(params[:user])
+      if @user.update(user_params)
         format.html { redirect_to users_url, notice: "User #{@user.name} was successfully updated." }
         # format.json { render :show, status: :ok, location: @user }
         format.json{ head :no_content}

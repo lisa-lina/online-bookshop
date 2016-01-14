@@ -17,4 +17,4 @@
 /tmp
 
 #ignore rubymine project files
-.idea/
+**/.idea/

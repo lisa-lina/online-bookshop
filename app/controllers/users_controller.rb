@@ -62,10 +62,11 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
+    @user = User.find(params[:id])
     begin
       @user.destroy
       flash[:notice] = "User #{@user.name} deleted"
-    rescue StandardError => e
+    rescue Exception => e
       flash[:notice] = e.message
     end
     respond_to do |format|
